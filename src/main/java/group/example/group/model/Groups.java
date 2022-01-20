@@ -4,32 +4,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Groups {
-    static List<String> groupsList=new ArrayList<String>();
+    static List<Group> groupsList=new ArrayList<Group>();
 
-    public Groups(List<String> groupsList) {
+    public Groups(List<Group> groupsList) {
         this.groupsList = groupsList;
     }
     public Groups() {
     }
 
-    public static List<String> getGroupsList() {
+    public static List<Group> getGroupsList() {
         return groupsList;
     }
 
-    public static void setGroupsList(List<String> groupsL) {
+    public static void setGroupsList(List<Group> groupsL) {
         groupsList = groupsL;
     }
 
     public static void addGroup(Group group){
-        groupsList.add(group.getGroupName());
+        groupsList.add(group);
     }
 
-    public static boolean deleteGroup(Group group){
-        if(groupsList.contains(group.getGroupName())){
-            groupsList.remove(group.getGroupName());
-            return true;
-        }else {
-            return false;
-        }
+    public static void deleteGroup(String group){
+        if(groupsList.contains(group)){
+            groupsList.remove(group);
+    }
     }
 }

@@ -1,6 +1,7 @@
 package group.example.group.Controller;
 
 import group.example.group.DAO.GroupiesDAO;
+import group.example.group.model.Group;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,6 +21,24 @@ public class GroupiesController {
     @GetMapping("/getUsers")
     private List<String> getAllUsers(){
         return GDAO.getUsers();
+    }
+
+    @GetMapping("/getGroups")
+    private List<Group> getAllGroups(){
+        return GDAO.getGroups() ;
+    }
+    @GetMapping("/getAdmin")
+    private String getAdmin(){
+        return GDAO.getAdminName();
+    }
+    @PostMapping("/createGroups")
+    private void createGroups(@RequestBody String request){
+        GDAO.lastMinOrlastMax(request);
+    }
+
+    @PostMapping("/deleteGroup")
+    private void deleteGroup(@RequestBody String group){
+        GDAO.deleteGroup(group);
     }
 
 }

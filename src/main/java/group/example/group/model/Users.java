@@ -5,19 +5,20 @@ import java.util.List;
 
 public class Users {
 
-    static List<String> usersList=new ArrayList<String>();
+    static List<String> usersList=new ArrayList<>();
 
     public Users(){}
     public Users(List<String> usersList){
         this.usersList=usersList;
     }
     public static void addUser(String user){
-        usersList.add(user);
+        if(!user.equals("")&&!usersList.contains(user))
+            usersList.add(user);
     }
 
-    public static boolean deleteUser(User user){
-        if(usersList.contains(user.getUsername())){
-            usersList.remove(user.getUsername());
+    public static boolean deleteUser(String user){
+        if(usersList.contains(user)){
+            usersList.remove(user);
             return true;
         }else{
             return false;
