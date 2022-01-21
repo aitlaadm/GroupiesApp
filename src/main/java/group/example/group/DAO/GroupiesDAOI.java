@@ -13,4 +13,5 @@ public interface GroupiesDAOI {
     String getAdminName();
     void lastMinOrlastMax(String response);
     void deleteGroup(String group);
+    void createGroup(int nbGroup);
 }

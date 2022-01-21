@@ -21,7 +21,7 @@ public class Admin {
     public static void createGroups(int nbGroup){
         Groups groups = new Groups();
         for(int j=0;j<=nbGroup;j++){
-            Group group = new Group("Group"+i,capacite,Users.usersList);
+            Group group = new Group("Group"+i);
             groups.addGroup(group);
             i++;
         }

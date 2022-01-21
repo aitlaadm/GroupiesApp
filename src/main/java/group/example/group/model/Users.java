@@ -11,6 +11,7 @@ public class Users {
     public Users(List<String> usersList){
         this.usersList=usersList;
     }
+
     public static void addUser(String user){
         if(!user.equals("")&&!usersList.contains(user))
             usersList.add(user);

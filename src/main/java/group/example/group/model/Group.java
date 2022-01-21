@@ -9,6 +9,9 @@ public class Group {
     List<String> groupUsers = new ArrayList<String>();
 
     public Group(){}
+    public Group(String groupName){
+        this.groupName=groupName;
+    }
     public Group(String groupName, int capacite){
         this.groupName=groupName;
         this.groupCapacite=capacite;

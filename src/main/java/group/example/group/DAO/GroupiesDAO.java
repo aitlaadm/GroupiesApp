@@ -39,6 +39,11 @@ public class GroupiesDAO implements GroupiesDAOI{
         Groups.deleteGroup(group);
     }
 
+    @Override
+    public void createGroup(int nbGroup) {
+        Admin.createGroups(nbGroup);
+    }
+
 
 }
 

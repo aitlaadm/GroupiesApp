@@ -31,9 +31,10 @@ public class GroupiesController {
     private String getAdmin(){
         return GDAO.getAdminName();
     }
+
     @PostMapping("/createGroups")
-    private void createGroups(@RequestBody String request){
-        GDAO.lastMinOrlastMax(request);
+    private void createGroups(@RequestBody int nbGroup){
+        GDAO.createGroup(nbGroup);
     }
 
     @PostMapping("/deleteGroup")
