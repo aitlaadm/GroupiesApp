@@ -6,12 +6,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.By;
-
-import java.lang.Thread;
-import java.net.MalformedURLException;
-
 import java.util.concurrent.TimeUnit;
-
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.springframework.boot.test.context.SpringBootTest;

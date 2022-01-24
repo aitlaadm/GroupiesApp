@@ -8,9 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.By;
 
-import java.lang.Thread;
-import java.net.MalformedURLException;
-
 import java.util.concurrent.TimeUnit;
 
 import org.junit.jupiter.api.Test;
